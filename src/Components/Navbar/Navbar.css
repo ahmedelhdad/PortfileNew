@@ -1,0 +1,75 @@
+.navbar .container
+{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+}
+.navbar .n-left
+{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap:2rem
+}
+.navbar .n-left .n-name
+{
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.navbar .n-right
+{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-weight: 400;
+    justify-content: center;
+
+}
+.n-list 
+{
+    flex: 10;
+}
+.n-list > ul 
+{
+    display: flex;
+    gap: 2rem;
+    margin-right: 4rem;
+    transition: 0.5s;
+}
+.n-list > ul li
+{
+    transition: 0.5s ease-in-out;
+}
+.n-list > ul li:hover,
+.active
+{
+    color: var(--orange);
+    cursor: pointer;
+}
+@media(max-width:991px)
+{
+    .n-list > ul
+    {
+        display: none;
+    }
+
+}
+@media(max-width:767px)
+{
+    
+    .navbar .container
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar .n-left
+    {
+        justify-content: space-between;
+        flex: 1;
+    }
+    .navbar .n-left .n-name
+    {
+        font-size: 24px;
+    }
+}
