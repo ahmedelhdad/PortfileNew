@@ -79,7 +79,8 @@
 }
 
 .right img:nth-child(3) {
-    transform: scale(1.4);
+    /* transform: scale(1); */
+    display: none;
 }
 
 .right img:nth-child(4) {
@@ -175,9 +176,6 @@
 }
 
 @media(max-width:767px) {
-    .landing .right {
-
-    }
 
     .right>img:nth-child(1) {
         display: none;
@@ -208,10 +206,11 @@
     }
     .right .thumbup {
         top: 156px;
-        
     }
 
     .Crown {
         top: -256px;
+        margin-left: -60px;
+        z-index: -1;
     }
 }

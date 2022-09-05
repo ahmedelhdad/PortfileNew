@@ -10,12 +10,14 @@ const Work = () => {
   const handlerWork = projects.map((item) => {
     return (
       <div className="box" key={item.id}>
-        <img src={item.img} alt={item.title} />
+        <img src={item.image} alt={item.title} />
         <div className="over">
-          <a href={item.url}>
+          <a  target={"blank"} href={item.gitHub}>
             <FaGithub />
           </a>
-          <a href={item.url}>
+          <a 
+          target={"blank"}
+          href={item.url}>
             <FaGoogleWallet />
           </a>
         </div>
@@ -23,9 +25,8 @@ const Work = () => {
     );
   });
   const handler = (e) => {
-    Data.filter((project) =>
-      project.type === e.target.type ? setProjects([project]) : project
-    );
+  const updatedList = Data.filter((project) =>project.type === e.target.type )
+    setProjects(updatedList)
   };
   return (
     <div className="work" id="portfolio">

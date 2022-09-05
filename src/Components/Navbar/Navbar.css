@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     height: 10vh;
+
 }
 .navbar .n-left
 {
@@ -13,9 +14,36 @@
 }
 .navbar .n-left .n-name
 {
-    font-size: 1.3rem;
+    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 4px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 0.5px var(--orange);
+    position: relative;
+}
+.navbar .n-left .n-name::before
+{
+    content: 'Ahmed';
+    position: absolute;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    -webkit-text-fill-color: red;
+    animation: text 4s forwards infinite ease-in-out;
+    transition: 0.5s;
+}
+@keyframes text 
+{
+    50% 
+    {
+        width: 100%;
+
+    }
+    100% 
+    {
+        width: 0%;
+
+    }
 }
 .navbar .n-right
 {
@@ -47,11 +75,34 @@
     color: var(--orange);
     cursor: pointer;
 }
+.n-list > ul li svg
+{
+    display: none;
+}
 @media(max-width:991px)
 {
-    .n-list > ul
+    .n-list 
+    {
+        position: fixed;
+        left: 50% ;
+        bottom: 20px ;
+        transform: translateX(-200%);
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.596);
+        border-radius: 50px;
+        z-index: 2222222222;
+        animation: fade-nav-in 1s ease 1 forwards;
+        transition: 0.5s;
+
+    }
+    .n-list > ul li span
     {
         display: none;
+    }
+    .n-list > ul li svg
+    {
+        display: block;
+        font-size: 30px;
     }
 
 }
@@ -70,6 +121,13 @@
     }
     .navbar .n-left .n-name
     {
-        font-size: 24px;
+        font-size: 2rem;
     }
 }
+
+@keyframes fade-nav-in {
+    to {
+      transform: translateX(-50%);
+      opacity: 1;
+    }
+  }

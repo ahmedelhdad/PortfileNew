@@ -1,6 +1,7 @@
 import React from "react";
 import icon from '../../img/humble.png'
 import "./Serivces.css";
+import Cv from './Ahmed Mahmoud.pdf'
 import {motion} from 'framer-motion'
 const Serivces = () => {
   const transiton = {duration:2,type:'spring'}
@@ -17,7 +18,12 @@ const Serivces = () => {
             Frondend Developer with high level of experience in web designing
             and development producting the Quality work
           </h4>
+          <a href={Cv}
+          target={"blank"}
+
+          >
           <button className="button n-button">Download Cv</button>
+          </a>
         </motion.div>
         <motion.div 
         initial={{translateX:'90%'}}
